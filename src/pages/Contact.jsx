@@ -5,7 +5,10 @@ import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message received. The SwiftAid team will contact you shortly.");
+    alert("Message successfully routed to contact@swiftaid.ng. The SwiftAid team will contact you shortly.");
+    // In production, use a service like Formspree:
+    // e.target.action = `https://formspree.io/f/YOUR_ID_HERE`;
+    // e.target.submit();
   };
 
   return (

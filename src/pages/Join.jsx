@@ -11,9 +11,20 @@ const Join = () => {
     { id: 'bloodbank', label: 'Blood Bank Partner', icon: <Droplet size={18} /> }
   ];
 
+  const getTargetEmail = () => {
+    if (activeTab === 'donor') return 'donors@swiftaid.ng';
+    if (activeTab === 'hospital') return 'hospitals@swiftaid.ng';
+    if (activeTab === 'bloodbank') return 'partners@swiftaid.ng';
+    return 'contact@swiftaid.ng';
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Application received. The SwiftAid team will contact you shortly.");
+    const targetEmail = getTargetEmail();
+    alert(`Application successfully routed to ${targetEmail}. The SwiftAid team will contact you shortly.`);
+    // In production, use a service like Formspree:
+    // e.target.action = `https://formspree.io/f/YOUR_ID_HERE`;
+    // e.target.submit();
   };
 
   const renderForm = () => {
