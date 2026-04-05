@@ -22,7 +22,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 750px) 350px', gap: '3rem', justifyContent: 'center', alignItems: 'start' }}>
+          <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 750px) 350px', gap: '3rem', justifyContent: 'center', alignItems: 'start' }}>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -101,8 +101,17 @@ const Contact = () => {
 
       <style>{`
         @media (max-width: 1024px) {
-          div[style*="grid-template-columns: minmax(0, 750px) 350px"] {
+          .contact-grid {
             grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .card {
+            padding: 1.5rem !important;
+          }
+          .section {
+            padding: 3rem 0 !important;
           }
         }
       `}</style>

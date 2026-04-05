@@ -293,7 +293,19 @@ const Join = () => {
 
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             {/* Tab Navigation */}
-            <div style={{ display: 'flex', overflowX: 'auto', gap: '10px', marginBottom: '3rem', paddingBottom: '10px', scrollbarWidth: 'none', justifyContent: 'center' }}>
+            <div 
+              className="tabs-nav"
+              style={{ 
+                display: 'flex', 
+                overflowX: 'auto', 
+                gap: '10px', 
+                marginBottom: '3rem', 
+                paddingBottom: '1rem', 
+                scrollbarWidth: 'none', 
+                justifyContent: 'center',
+                msOverflowStyle: 'none'
+              }}
+            >
               {tabs.map(tab => (
                 <button
                   key={tab.id}
@@ -368,6 +380,25 @@ const Join = () => {
         }
         textarea {
           resize: vertical;
+        }
+        @media (max-width: 768px) {
+          .tabs-nav {
+            justify-content: flex-start !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+          .card {
+            padding: 1.5rem !important;
+          }
+          .section {
+            padding: 3rem 0 !important;
+          }
+          h1 {
+            font-size: 2.2rem !important;
+          }
+        }
+        .tabs-nav::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>

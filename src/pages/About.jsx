@@ -14,13 +14,13 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Our Mission to <span className="text-gradient">Save Lives</span></h1>
+              <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', marginBottom: '1.5rem' }}>Our Mission to <span className="text-gradient">Save Lives</span></h1>
               <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
                 SwiftAid was founded with a single, urgent goal: to ensure that no patient is ever at risk due to a lack of blood supply. 
                 In Nigeria, where 1 in 4 maternal deaths is caused by heavy bleeding, we are building the coordination layer that turns 
                 emergency response into a precise science.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '2rem' }}>
                 <div>
                   <h3 style={{ color: 'var(--accent)', marginBottom: '0.5rem' }}>100%</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Verified Supply</p>

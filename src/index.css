@@ -1,27 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
 
 :root {
-  --primary: #0f5f6e; /* Primary SwiftTeal */
-  --primary-dark: #0a4d59;
-  --primary-light: #1a7a8d;
-  --accent: #ce2e3a; /* Precision SwiftRed from Logo */
-  --accent-hover: #b11f2a;
-  
-  /* Dark Theme (Default) - Midnight Teal */
-  --bg-dark: #010c0e;
-  --bg-darker: #000506;
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --glass: rgba(15, 95, 110, 0.15);
-  --glass-border: rgba(206, 46, 58, 0.25);
-  --nav-bg: rgba(1, 12, 14, 0.85);
-  --card-bg: rgba(1, 19, 22, 0.7);
-  --hero-overlay: rgba(1, 12, 14, 0.9);
-  --hero-text: #ffffff;
-}
-
-[data-theme='light'] {
   --bg-dark: #ffffff;
   --bg-darker: #f8fafc;
   --text-primary: #0f172a;
@@ -38,6 +17,26 @@
   --shadow-sm: 0 2px 4px rgba(15, 95, 110, 0.05);
   --shadow-md: 0 10px 25px rgba(15, 95, 110, 0.08);
   --shadow-lg: 0 20px 50px rgba(15, 95, 110, 0.12);
+}
+
+[data-theme='dark'] {
+  --primary: #0f5f6e; /* Primary SwiftTeal */
+  --primary-dark: #0a4d59;
+  --primary-light: #1a7a8d;
+  --accent: #ce2e3a; /* Precision SwiftRed from Logo */
+  --accent-hover: #b11f2a;
+  
+  --bg-dark: #010c0e;
+  --bg-darker: #000506;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --glass: rgba(15, 95, 110, 0.15);
+  --glass-border: rgba(206, 46, 58, 0.25);
+  --nav-bg: rgba(1, 12, 14, 0.85);
+  --card-bg: rgba(1, 19, 22, 0.7);
+  --hero-overlay: rgba(1, 12, 14, 0.9);
+  --hero-text: #ffffff;
 }
 
 :root {

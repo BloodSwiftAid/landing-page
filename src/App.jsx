@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Droplet, Menu, X, Globe, TrendingUp, MapPin, Sun, Moon } from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { 
+  Droplet, 
+  Menu, 
+  X, 
+  Globe, 
+  TrendingUp, 
+  MapPin, 
+  Sun, 
+  Moon 
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Assets
 import logo from './assets/logo.png';
@@ -11,6 +20,15 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Join from './pages/Join';
+
+// Scroll to top helper
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,8 +67,22 @@ const Navbar = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} style={{ background: 'none', border: 'none', color: theme === 'dark' ? 'white' : 'black', display: 'block' }} className="mobile-toggle">
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        <button 
+          onClick={() => setIsOpen(!isOpen)} 
+          style={{ 
+            background: 'none', 
+            border: 'none', 
+            color: 'var(--text-primary)', 
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '8px',
+            cursor: 'pointer'
+          }} 
+          className="mobile-toggle"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
@@ -78,6 +110,17 @@ const Navbar = ({ theme, toggleTheme }) => {
             <Link to="/" onClick={() => setIsOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.5rem', fontWeight: 700 }}>Home</Link>
             <Link to="/about" onClick={() => setIsOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.5rem', fontWeight: 700 }}>About Us</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.5rem', fontWeight: 700 }}>Contact</Link>
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', padding: '1rem', background: 'var(--glass)', borderRadius: '12px' }}>
+              <span style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>Switch Appearance</span>
+              <button 
+                onClick={toggleTheme} 
+                style={{ background: 'var(--accent)', border: 'none', cursor: 'pointer', color: 'white', padding: '10px', borderRadius: '50%', display: 'flex', alignItems: 'center' }}
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            </div>
+
             <Link to="/join" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ padding: '1rem', marginTop: '1rem' }}>Join Network</Link>
           </motion.div>
         )}
@@ -143,14 +186,15 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-wrapper">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About theme={theme} />} />
-            <Route path="/contact" element={<Contact theme={theme} />} />
-            <Route path="/join" element={<Join theme={theme} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/join" element={<Join />} />
           </Routes>
         </main>
         <Footer />
