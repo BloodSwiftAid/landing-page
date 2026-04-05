@@ -86,9 +86,9 @@ const Hero = () => (
 const ProblemSection = () => (
   <section id="problem" className="section" style={{ background: 'var(--bg-dark)' }}>
     <div className="container">
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '5rem', alignItems: 'center' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '5rem', alignItems: 'center' }}>
         <div>
-          <h2 style={{ fontSize: '3rem' }}>The <span className="text-gradient">Critical Need</span> in Nigeria</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)' }}>The <span className="text-gradient">Critical Need</span> in Nigeria</h2>
           <p style={{ marginTop: '2rem', color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8' }}>
             Over 70% of blood needed in emergencies is currenty unavailable in time. SwiftAid addresses the fragmented systems resulting in dangerous delays.
           </p>
@@ -107,7 +107,7 @@ const ProblemSection = () => (
         </div>
         <div className="card glow" style={{ padding: '3rem' }}>
           <Activity size={80} color="var(--accent)" style={{ marginBottom: '2rem' }} />
-          <h3 style={{ fontSize: '2rem' }}>Always Ready</h3>
+          <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)' }}>Always Ready</h3>
           <p style={{ marginTop: '1.5rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             SwiftAid is the coordination layer that connects hospitals to blood banks in real-time. We eliminate the search, so you can focus on the patient.
           </p>
@@ -120,12 +120,12 @@ const ProblemSection = () => (
 const SolutionSection = () => (
   <section id="solution" className="section" style={{ background: 'var(--bg-darker)' }}>
     <div className="container" style={{ textAlign: 'center' }}>
-      <h2 style={{ fontSize: '3rem' }}>Intelligent <span className="text-gradient">Coordination</span></h2>
+      <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)' }}>Intelligent <span className="text-gradient">Coordination</span></h2>
       <p style={{ maxWidth: '800px', margin: '2rem auto 5rem', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
         A unified coordination platform that scales with your hospital's needs.
       </p>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
         <motion.div 
           className="card"
           initial={{ opacity: 0, y: 20 }}
@@ -191,7 +191,7 @@ const Home = () => (
     <section className="section">
       <div className="container" style={{ textAlign: 'center' }}>
         <div className="glass-card" style={{ padding: '4rem', borderRadius: '40px', background: 'var(--glass)', border: '1px solid var(--glass-border)' }}>
-          <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Ready to Secure Your Supply?</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', marginBottom: '2rem' }}>Ready to Secure Your Supply?</h2>
           <p style={{ maxWidth: '600px', margin: '0 auto 3rem', fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
             Join the network of hospitals relying on SwiftAid for life-saving coordination.
           </p>

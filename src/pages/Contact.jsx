@@ -16,7 +16,7 @@ const Contact = () => {
       <section className="section">
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Get in <span className="text-gradient">Touch</span></h1>
+            <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', marginBottom: '1.5rem' }}>Get in <span className="text-gradient">Touch</span></h1>
             <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
               General inquiries, feedback, or support - we're here to help.
             </p>

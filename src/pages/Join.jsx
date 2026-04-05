@@ -33,7 +33,7 @@ const Join = () => {
         return (
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
              <h3 style={{ marginBottom: '1rem' }}>Join the SwiftAid donor network</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>First Name</label>
                 <input type="text" placeholder="Adebayo" required />
@@ -48,7 +48,7 @@ const Join = () => {
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>We'll use this to reach you when a match is found near you</p>
               <input type="tel" placeholder="+234 ..." required />
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Blood Group</label>
                 <select required>
@@ -114,7 +114,7 @@ const Join = () => {
               <label>Hospital / Clinic Name</label>
               <input type="text" placeholder="e.g. St. Nicholas Hospital" required />
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Contact Person Full Name</label>
                 <input type="text" placeholder="Dr. Jane Doe" required />
@@ -132,7 +132,7 @@ const Join = () => {
                 </select>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Phone Number</label>
                 <input type="tel" placeholder="+234 ..." required />
@@ -146,7 +146,7 @@ const Join = () => {
               <label>Hospital Address</label>
               <textarea rows="2" placeholder="Street, City, State" required></textarea>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Average blood requests per month</label>
                 <select required>
@@ -201,7 +201,7 @@ const Join = () => {
               <label>Facility Name</label>
               <input type="text" placeholder="e.g. Lagos Central Blood Bank" required />
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Contact Person Full Name</label>
                 <input type="text" placeholder="Aminu Garba" required />
@@ -211,7 +211,7 @@ const Join = () => {
                 <input type="text" placeholder="Lab Director" required />
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Phone Number</label>
                 <input type="tel" placeholder="+234 ..." required />
@@ -227,7 +227,7 @@ const Join = () => {
             </div>
             <div className="form-group">
               <label>Blood groups currently stocked (Tick all available)</label>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', marginTop: '0.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', gap: '10px', marginTop: '0.5rem' }}>
                 {['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'].map(group => (
                   <label key={group} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem' }}>
                     <input type="checkbox" /> {group}
@@ -235,7 +235,7 @@ const Join = () => {
                 ))}
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
               <div className="form-group">
                 <label>Average monthly units available</label>
                 <select required>
@@ -275,7 +275,7 @@ const Join = () => {
       <section className="section">
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Join the <span className="text-gradient">Network</span></h1>
+            <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', marginBottom: '1.5rem' }}>Join the <span className="text-gradient">Network</span></h1>
             <AnimatePresence mode="wait">
               <motion.p 
                 key={activeTab}
